@@ -39,12 +39,12 @@ export default function SignIn() {
         <div>
             <h1>Signin</h1>
             <InputControl label ="Email" placeholder="Enter Email address" onChange={(event) => setValues((prev) => ({ ...prev, email: event.target.value }))}/>
-            <InputControl label ="Password" placeholder="Enter Password" onChange={(event) => setValues((prev) => ({ ...prev, password: event.target.value }))}/>
+            <InputControl type="Password" label ="Password" placeholder="Enter Password" onChange={(event) => setValues((prev) => ({ ...prev, password: event.target.value }))}/>
             <div className='log'>
             <h4>{errorMessage}</h4>
                 <button onClick={handleSubmit} disabled={submitButtonDisable}  >Login</button>
                 <p>
-                    Already have an account ? {" "} 
+                    Dont have an account ? {" "} 
                     <span>
                         <Link to="/SignUp">Signup </Link>
                         </span>
