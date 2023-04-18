@@ -79,11 +79,11 @@
   letter-spacing: 0.25rem;
   margin-bottom: 0;
 }
-.Region-filter {
+/* .Region-filter {
   position: absolute;
   right: 0;
   top: 0;
-}
+} */
 
 .containerpaymentpage {
   margin-top: 150px;
@@ -102,6 +102,13 @@
 .listpayment {
   text-align: center;
   margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+}
+.payyy a{
+  padding-left: 10px;
+  text-decoration: none;
+  font-weight: bolder;
 }
 
 .space {
@@ -176,4 +183,51 @@
   border-radius: 5px;
   border: 2px solid silver;
   box-shadow: 0 0 5px 25px; */
+}
+
+.containerimg{
+  /* width: 80vw; */
+  /* height: 80vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(17, 158, 205); */
+
+
+}
+.image{
+    /* width: 80vw; */
+  height: 82vh;
+}
+.signout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 70px;
+}
+.card{
+  width:20vw;
+  /* display: flex;
+  flex-direction: column; */
+
+}
+.maintain{
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.paypal-body{
+  text-align: center;
+  margin-top: 50px;
+}
+.strippe a {
+  padding-left: 15px;
+  text-decoration: none;
+  font-weight: bolder;
+  color: black;
+  letter-spacing: 2px;
 }

@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { auth } from '../Firebase';
 import InputControl from '../InputControl'
 
-export default function SignIn() {
+export default function SignIn({setIsLoggedIn}) {
     const navigate = useNavigate();
 
     const [values, setValues] = useState({
@@ -25,8 +25,12 @@ export default function SignIn() {
         setErrorMessage("");
         setSubmitButtonDisable(true)
         signInWithEmailAndPassword(auth, values.email, values.password).then((res) => {
+            
             navigate("/");
+
             setSubmitButtonDisable(false)
+            setIsLoggedIn(true)
+    
         })
             .catch((err) => {
                 setSubmitButtonDisable(false)

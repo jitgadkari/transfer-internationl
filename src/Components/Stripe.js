@@ -1,18 +1,24 @@
 import React from 'react'
-import StripeChecout from 'react-stripe-checkout';
+import {  useNavigate } from 'react-router-dom';
+// import StripeChecout from 'react-stripe-checkout';
 
-export default function Stripe({setIsUsingStripe}) {
-    const onToken = (token) => {
-        console.log(token);
+export default function Stripe() {
+    const navigate = useNavigate();
+    // const onToken = (token) => {
+    //     console.log(token);
+    // }
+
+    const cancelHandle =()=>{
+        navigate("/paymentsgateway");
     }
     return (
         <div className='listpayment'>
-               <h2>Make payment with Stripe Gateway</h2>
+               <h5>Make payment with Stripe Gateway</h5>
                <div>
-                <ul className=''>
+                <ul className='strippe'>
                    
                     <a href="https://buy.stripe.com/test_14k4i63vz5uW9Ve4gg">Stripe Payment</a>
-                    <script async
+                    {/* <script async
                         src="https://js.stripe.com/v3/buy-button.js">
                     </script>
                     <stripe-buy-button
@@ -31,11 +37,11 @@ export default function Stripe({setIsUsingStripe}) {
                         currency='Inr'
                         amount="10000"
                         stripekey="sk_test_51Mtkd6SCRGbr1h21kl0PnasVGdkruYAv1TvrZ807d1bXbtl9cjxkGzEZ8LOax3wOnPYt3DghZtB0iEUZ1wL6HxoK001WD7yqvi"
-                    />
+                    /> */}
                 </ul>
                 </div>
                 <div>
-                <button onClick={() => setIsUsingStripe(false)}>Cancel</button>
+                <button onClick={cancelHandle}>Cancel</button>
                 </div>
             </div>
     

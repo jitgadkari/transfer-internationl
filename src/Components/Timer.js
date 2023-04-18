@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Timer({ timerDays, timerHours, timerMinutes, timerSeconds }) {
+export default function Timer({ 
+    // timerDays, timerHours, timerMinutes, timerSeconds
+ }) {
   return (
     <div>
-        <section className="timer-container">
+        {/* <section className="timer-container">
         <section className="timer">
           <div className="clock">
             <section>
@@ -27,13 +29,13 @@ export default function Timer({ timerDays, timerHours, timerMinutes, timerSecond
             </section>
           </div>
         </section>
-      </section>
+      </section> */}
     </div>
   )
 }
-Timer.defaultProps = {
-    timerDays: 2,
-    timerHours: 0,
-    timerMinutes: 0,
-    timerSeconds: 0,
-  };
+// Timer.defaultProps = {
+//     timerDays: 2,
+//     timerHours: 0,
+//     timerMinutes: 0,
+//     timerSeconds: 0,
+//   };

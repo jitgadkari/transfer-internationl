@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import PayPal from './PayPal';
+
 // import { useNavigate } from 'react-router-dom';
 
 import Razorpay from './Razorpay';
@@ -7,6 +9,7 @@ import Stripe from './Stripe';
 export default function Paymentmethods() {
     const [isUsingRazorpay, setIsUsingRazorpay] = useState(false);
     const [isUsingStripe, setIsUsingStripe] = useState(false);
+   
 
     // const navigate = useNavigate();
     const onRazorpayClickHandler = () => {
@@ -19,6 +22,7 @@ export default function Paymentmethods() {
 
     return (
         <div>
+           
             {isUsingRazorpay && (
                 <Razorpay setIsUsingRazorpay={setIsUsingRazorpay} />
             )}
@@ -35,6 +39,7 @@ export default function Paymentmethods() {
 
                     </>
                 )}
+                <PayPal/>
 
             </div>
         </div>

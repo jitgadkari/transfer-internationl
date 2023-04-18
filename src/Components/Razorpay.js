@@ -1,8 +1,12 @@
 import React,{useState} from 'react'
+import {useNavigate } from 'react-router-dom';
 
-export default function Razorpay({setIsUsingRazorpay}) {
+export default function Razorpay() {
     const [amount, setamount] = useState('');
-
+    const navigate = useNavigate();
+const cancelHandle =()=>{
+  navigate("/paymentsgateway")
+}
   const handleSubmit = (e)=>{
     e.preventDefault();
     if(amount === ""){
@@ -41,7 +45,7 @@ export default function Razorpay({setIsUsingRazorpay}) {
      <input type="text"placeholder='Enter Amount'value={amount}onChange={(e)=>setamount(e.target.value)} />
      <br/><br/>
      <button onClick={handleSubmit}>submit</button>
-     <button onClick={() => setIsUsingRazorpay(false)}>Cancel</button>
+     <button onClick={cancelHandle}>Cancel</button>
     </div>
   )
 }
