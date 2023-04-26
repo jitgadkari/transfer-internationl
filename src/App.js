@@ -14,6 +14,8 @@ import Razorpay from './Components/Razorpay';
 import Signout from './Components/Pages/Signout';
 import PayPal from './Components/PayPal';
 import Stripe from './Components/Stripe';
+import Paytm from './Components/Paytm';
+import Stripepg from './Components/Stripe PG/Stripepg';
 // import Razorpay from './Components/Razorpay';
 
 
@@ -70,7 +72,9 @@ function App() {
       region: "Asia Pacific",
       url:"https://rzp.io/i/FtXiFGYFO",
       // button:<Razorpay/>,
-      nav:"/razorpay"
+      nav:"/razorpay",
+      imageurl:"https://www.ecommerce-nation.com/wp-content/uploads/2019/02/razorpay.webp"
+
     },
     {
       id: 'r2',
@@ -78,21 +82,24 @@ function App() {
       url:"https://buy.stripe.com/test_14k4i63vz5uW9Ve4gg",
       region: "North America",
       // button:<PayPal/>,
-      nav:"/paypal"
+      nav:"/paypal",
+      imageurl:"https://financialit.net/sites/default/files/068bjcjwbw0snwhiq0kno5m-15.1602794215.png"
     },
     {
       id: 'r3',
       paymentMethod: 'Razorpay',
       region: "Europe",
       url:"https://rzp.io/i/FtXiFGYFO",
-      nav:"/razorpay"
+      nav:"/razorpay",
+      imageurl:"https://www.ecommerce-nation.com/wp-content/uploads/2019/02/razorpay.webp"
     },
     {
       id: 'r4',
       paymentMethod:"Stripe",
       url:"https://buy.stripe.com/test_14k4i63vz5uW9Ve4gg",
       region: "Asia Pacific",
-      nav:"/stripe"
+      nav:"/stripe",
+      imageurl:"https://miro.medium.com/v2/resize:fit:1200/1*6W4oDZ5fQKgm7AKtAgP7_Q.png"
     },
   ];
   return (
@@ -111,6 +118,8 @@ function App() {
           <Route path="/paypal" element={<PayPal />} />
           <Route path="/stripe" element={<Stripe/>} />
           <Route path="/Signout" element={<Signout setIsLoggedIn={setIsLoggedIn}/>} />
+          <Route path="/paytm" element={<Paytm/>}/>
+          <Route path="/stripepg" element={<Stripepg/>}/>
         </Routes>
       </Router>
     </div>

@@ -89,11 +89,11 @@ export default function Header({name,isLoggedIn}) {
 
 
 
-                    {/* {isLoggedIn &&(<Link to="/SignIn" >SignIn</Link>)}
-                    {isLoggedIn &&(<Link to="/SignUp">SignUp</Link>)} */}
+                    {isLoggedIn &&(<Link to="/SignIn" >SignIn</Link>)}
+                    {isLoggedIn &&(<Link to="/SignUp">SignUp</Link>)}
 
-                    {(<Link to="/SignIn" >SignIn</Link>)}
-                    {(<Link to="/SignUp">SignUp</Link>)}
+                    {/* {(<Link to="/SignIn" >SignIn</Link>)}
+                    {(<Link to="/SignUp">SignUp</Link>)} */}
 
 
                 </ul>

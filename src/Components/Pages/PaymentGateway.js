@@ -20,12 +20,12 @@ export default function PaymentGateway(props) {
                 <h4>{props.name ? `Welcome - ${props.name}` : ""}</h4>
                 <ul className='list'>
                    <li><Region selected={filteredRegion} onChangeFilter={filterChangeHandler}/></li> 
-                   {/* {(<Link to="/Signout">Signout</Link>)} */}
+                   {(<Link to="/Signout">Signout</Link>)}
                 </ul>
             
                 
             </nav>
-            {filteredRegions.map((Region_data)=><Payment key={Region_data.id} paymentMethod={Region_data.paymentMethod} url={Region_data.url} region={Region_data.region} button={Region_data.button} nav={Region_data.nav}/>)}
+            {filteredRegions.map((Region_data)=><Payment key={Region_data.id} paymentMethod={Region_data.paymentMethod} url={Region_data.url} region={Region_data.region} button={Region_data.button} nav={Region_data.nav} imageurl={Region_data.imageurl}/>)}
                
        
             {/* <Paymentmethods  /> */}

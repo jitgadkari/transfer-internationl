@@ -3,7 +3,7 @@ import Axios from 'axios';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-export default function Razorpay() {
+export default function Copyrazorpay() {
   const [amount, setamount] = useState('');
   const navigate = useNavigate();
   const cancelHandle = () => {
@@ -31,9 +31,6 @@ export default function Razorpay() {
             transactionamount: amount,
           }
           console.log(values);
-
-          updatePaymentOnServer(response.razorpay_payment_id, response.razorpay_order_id, "paid");
-
           Axios.post('http://localhost:8080/api/orders', values)
             .then(res => { alert("Success") })
             .catch(e => console.log(e))
@@ -101,18 +98,7 @@ export default function Razorpay() {
 
     // });
     // return;
-    function updatePaymentOnServer(payment_id, order_id, status) {
-      Axios.post('http://localhost:8080/api/updateorders', { payment_id: payment_id, order_id: order_id, status: status })
-        .then(res => {
-  
-          console.log("payment Successfullllll");
-        })
-        .catch(e => console.log(e))
-      console.log("sommmmmeething went wrong!!!!!!!!")
-    }
   }
-
-
 
   // $.ajax(
   //   {
