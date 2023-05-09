@@ -18,7 +18,7 @@ export default function PayPal() {
         <h1>Payment using PayPal</h1>
 
         <p>
-          <span className="price">$.1</span>
+          <span className="book-price">$.1</span>
         </p>
         <PayPalScriptProvider
           options={{ "client-id":"Aby38pHVGZbSh5bLpbkKaXBu5uBUJOHKwzPRop8XsLMitgh-XZRAyoDOBKyVC9vCHKZc96X2ZRS81lca" }}

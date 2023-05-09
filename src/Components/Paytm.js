@@ -1,3 +1,4 @@
+// import Axios from 'axios';
 import React, { useState } from 'react'
 
 export default function Paytm() {
@@ -7,6 +8,9 @@ export default function Paytm() {
         if (amount === "") {
           alert("please enter amount");
         } else{
+            // Axios.post('http://localhost:8080/api/startpayment', amount)
+            // .then(res => { alert("Success") })
+            // .catch(e => console.log(e))
 
         }
 

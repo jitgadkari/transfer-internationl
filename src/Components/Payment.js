@@ -13,9 +13,14 @@ export default function Payment({ url, paymentMethod, button, nav ,imageurl}) {
         // navigate to particular payment gateway
         ReactGA.event({
             category: `${paymentMethod}`,
-            action: `made payment using${paymentMethod}`,
-            value:1
+            action: `made payment using ${paymentMethod}`,
+            
         })
+        // ReactGA.event({
+        //     category: `${paymentMethod}`,
+        //     action: `Amount ${amount}`,
+        // })
+        
         alert("payment initiated");
 
     }

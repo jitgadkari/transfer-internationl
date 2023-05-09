@@ -16,6 +16,7 @@ import PayPal from './Components/PayPal';
 import Stripe from './Components/Stripe';
 import Paytm from './Components/Paytm';
 import Stripepg from './Components/Stripe PG/Stripepg';
+import Copypaypal from './Components/Copypaypal';
 // import Razorpay from './Components/Razorpay';
 
 
@@ -116,6 +117,7 @@ function App() {
           <Route path="/paymentsgateway" element={<PaymentGateway Region_data={Region_data} />} />
           <Route path="/razorpay" element={<Razorpay />} />
           <Route path="/paypal" element={<PayPal />} />
+          <Route path="/copypaypal" element={<Copypaypal/>} />
           <Route path="/stripe" element={<Stripe/>} />
           <Route path="/Signout" element={<Signout setIsLoggedIn={setIsLoggedIn}/>} />
           <Route path="/paytm" element={<Paytm/>}/>
